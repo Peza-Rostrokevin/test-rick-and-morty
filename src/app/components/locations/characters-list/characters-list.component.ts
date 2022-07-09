@@ -3,7 +3,6 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Store } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
 import { Character } from 'src/app/models/character.interface';
-import { DataService } from 'src/app/services/data.service';
 import { selectCharacters } from 'src/app/state/selectors/characters.selector';
 
 @Component({

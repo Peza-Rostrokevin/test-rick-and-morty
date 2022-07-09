@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
 import { DataService } from './services/data.service';
-import { Character } from 'src/app/models/character.interface';
 import { FormControl } from '@angular/forms';
 import { Location } from './models/location.interface';
 import { Episode } from './models/espisode.interface';
-import { filter, Observable, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { selectCharacters } from './state/selectors/characters.selector';
 import { selectLocations } from './state/selectors/locations.selector';
 import { selectEpisodes } from './state/selectors/episodes.selector';
-import { retrievedCharacterListFilter } from './state/actions/character.actions';
 
 @Component({
   selector: 'app-root',
