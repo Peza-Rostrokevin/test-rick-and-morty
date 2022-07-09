@@ -1,0 +1,5 @@
+<h1>Characters in {{data.typeName}}</h1>
+<p *ngIf="cant === 0">No characters found</p>
+<ul>
+  <li *ngFor="let c of characters$ | async"> {{c.name}} </li>
+</ul>

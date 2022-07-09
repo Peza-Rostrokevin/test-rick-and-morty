@@ -1,0 +1,22 @@
+<div class="sections">
+  <mat-button-toggle-group #group="matButtonToggleGroup" [(ngModel)]="displayedItems">
+    <mat-button-toggle *ngFor="let cont of contents" [value]="cont">
+      {{ cont }}
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+  <mat-form-field class="search_bar" appearance="outline">
+    <mat-label>Search {{displayedItems}}</mat-label>
+    <input type="text"
+        matInput
+        [formControl]="searchForm">
+  </mat-form-field>
+</div>
+<div class="container" *ngIf="displayedItems === this.contents[0]">
+  <app-characteres *ngFor="let c of characters$ | async" [character]="c"></app-characteres>
+</div>
+<div class="container" *ngIf="displayedItems === this.contents[1]">
+  <app-locations *ngFor="let l of locations$ | async" [location]="l"></app-locations>
+</div>
+<div class="container" *ngIf="displayedItems === this.contents[2]">
+  <app-episodes *ngFor="let e of episodes$ | async" [episode]="e"></app-episodes>
+</div>

@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  padding: 4.5rem 0px;
+  justify-content: space-evenly;
+  height: auto;
+  flex-wrap: wrap;
+}
+.sections {
+  display: flex;
+  height: 55px;
+  justify-content: space-evenly;
+  padding: 1.5rem 0px 0px 0px;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: auto;
+  mat-button-toggle-group {
+    height: 100%;
+  }
+}
+.search_bar {
+  width: 350px;
+}
