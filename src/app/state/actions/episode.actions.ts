@@ -5,3 +5,8 @@ export const retrievedEpisodeList = createAction(
   '[Episodes List/API] Retrieve Episodes Success',
   props<{ episodes: ReadonlyArray<Episode> }>()
 );
+
+export const retrievedEpisodeListFilter = createAction(
+  '[Episodes List/Filter] Retrieve Episodes With Filter Success',
+  props<{ episodes: ReadonlyArray<Episode> }>()
+);

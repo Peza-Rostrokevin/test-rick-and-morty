@@ -8,5 +8,5 @@ export const retrievedCharacterList = createAction(
 
 export const retrievedCharacterListFilter = createAction(
   '[Charactes List/Filter] Retrieve Characters With Filter Success',
-  props<{ name: string }>()
+  props<{ characters: ReadonlyArray<Character> }>()
 );

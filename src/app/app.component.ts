@@ -36,20 +36,13 @@ export class AppComponent {
   search(name: any | string){
     switch(this.displayedItems){
       case this.contents[0]:
-        /* this.store.dispatch(retrievedCharacterListFilter({name: name})); */
-        this.store.select(selectCharacters).subscribe(data => {
-          this.characters$ = of(data.filter( c => c.name.toLowerCase().includes(name.toLowerCase())))
-        });
+        this.dataServ.getCharacterFilter(name.toLowerCase())
         break;
       case this.contents[1]:
-        this.store.select(selectLocations).subscribe(data => {
-          this.locations$ = of(data.filter( (l: Location) => l.name.toLowerCase().includes(name.toLowerCase())))
-        });
+        this.dataServ.getLocationFilter(name.toLowerCase())
         break;
       case this.contents[2]:
-        this.store.select(selectEpisodes).subscribe(data => {
-          this.episodes$ = of(data.filter( (e: Episode) => e.name.toLowerCase().includes(name.toLowerCase())))
-        });
+        this.dataServ.getEpisodeFilter(name.toLowerCase())
         break;
     }
   }
